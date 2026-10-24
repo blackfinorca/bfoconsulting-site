@@ -1,6 +1,0 @@
-{
-  "name": "BFO Consulting — Kyoto Machiya Intelligence",
-  "description": "Turning public guest and booking data into operating decisions, rates, and channel settings for small accommodation owners in Japan.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
