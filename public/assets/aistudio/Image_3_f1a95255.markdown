@@ -1,0 +1,236 @@
+---
+name: Executive Azure & Ember
+colors:
+  surface: '#fff8f3'
+  surface-dim: '#e2d8cf'
+  surface-bright: '#fff8f3'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#fcf2e9'
+  surface-container: '#f6ece3'
+  surface-container-high: '#f0e7dd'
+  surface-container-highest: '#eae1d8'
+  on-surface: '#1f1b15'
+  on-surface-variant: '#454651'
+  inverse-surface: '#34302a'
+  inverse-on-surface: '#f9efe6'
+  outline: '#767682'
+  outline-variant: '#c6c5d3'
+  surface-tint: '#4858a8'
+  primary: '#041a6c'
+  on-primary: '#ffffff'
+  primary-container: '#223382'
+  on-primary-container: '#90a0f5'
+  inverse-primary: '#b9c3ff'
+  secondary: '#934b00'
+  on-secondary: '#ffffff'
+  secondary-container: '#ff891a'
+  on-secondary-container: '#623000'
+  tertiary: '#112448'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#293a5f'
+  on-tertiary-container: '#93a4d0'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#dee1ff'
+  primary-fixed-dim: '#b9c3ff'
+  on-primary-fixed: '#001159'
+  on-primary-fixed-variant: '#2f408f'
+  secondary-fixed: '#ffdcc5'
+  secondary-fixed-dim: '#ffb783'
+  on-secondary-fixed: '#301400'
+  on-secondary-fixed-variant: '#703700'
+  tertiary-fixed: '#d9e2ff'
+  tertiary-fixed-dim: '#b5c6f3'
+  on-tertiary-fixed: '#061a3e'
+  on-tertiary-fixed-variant: '#35466c'
+  background: '#fff8f3'
+  on-background: '#1f1b15'
+  surface-variant: '#eae1d8'
+typography:
+  display-hero:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 56px
+    fontWeight: '700'
+    lineHeight: 64px
+    letterSpacing: -0.03em
+  display-hero-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 44px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: 48px
+    letterSpacing: -0.025em
+  headline-lg-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 28px
+    fontWeight: '700'
+    lineHeight: 36px
+    letterSpacing: -0.02em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 28px
+    fontWeight: '600'
+    lineHeight: 36px
+    letterSpacing: -0.02em
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+    letterSpacing: -0.01em
+  stat-display:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 40px
+    letterSpacing: -0.02em
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+    letterSpacing: -0.005em
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 24px
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: 0em
+  label-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.01em
+  label-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  label-caps:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 11px
+    fontWeight: '700'
+    lineHeight: 16px
+    letterSpacing: 0.08em
+rounded:
+  sm: 0.5rem
+  DEFAULT: 1rem
+  md: 1.5rem
+  lg: 2rem
+  xl: 3rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 3rem
+  margin-mobile: 1.25rem
+  margin-tablet: 2rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+  space-2xl: 4rem
+---
+
+## Brand & Style
+
+This design system establishes a high-conviction, authoritative visual language for enterprise SaaS platforms and executive digital solutions. It bridges structural restraint with high-energy digital accents, evoking confidence, clarity, and momentum.
+
+The aesthetic blends **Modern Corporate SaaS** with luminous tonal gradients and tactile micro-details:
+- **Clean Architectural Canvases**: Warm mineral white backgrounds and structured modular cards preserve readability and cognitive ease.
+- **Deep Velocity Gradients**: Rich cobalt and midnight blues create deep focal anchors for key interactive stages, stat banners, and hero modules.
+- **Precision Energy**: High-visibility habañero orange acts as an assertive catalyst for conversion triggers, status indicators, and critical metrics.
+- **Executive Finishes**: Pill-shaped control mechanisms, frosted glass overlays, and diffused indigo ambient shadows provide a refined, tactile consumer-grade enterprise experience.
+
+## Colors
+
+The palette synthesizes deliberate contrast: foundational deep royal pigments against warm architectural minerals, punctuated by high-conversion habañero ember.
+
+### Role Assignments
+- **Primary (`#223382` - Deep Space Royal)**: Used for primary calls-to-action, structural brand identity, active navigation states, and headline accentuation. When paired with `Deadly Depths (#111144)`, it forms the brand's signature linear and radial background gradients.
+- **Secondary (`#F98513` - Habañero Orange)**: High-priority conversion moments, live notification badges, critical progress metrics, and key marketing badges. Used sparingly to preserve maximum focal intensity.
+- **Tertiary (`#9BACD8` - Aster Flower Blue)**: Secondary badges, subtle interactive states, icon container fills, hover highlights, and tinted gradient stops.
+- **Neutral (`#DAD1C8` - Jodhpur Tan)**: Soft borders, divider lines, disabled UI structures, and subdued background elevations.
+- **Surface Canvas (`#F4F1EC` - Luster White)**: The fundamental warm foundation for page backgrounds, card surfaces, and input canvas containers, offering superior eye comfort over sterile neutral whites.
+- **Deep Contrast (`#111144` - Deadly Depths Navy)**: High-contrast typography, footer shells, and deep immersion metric containers.
+
+## Typography
+
+The typography leverages **Plus Jakarta Sans** across all hierarchies to maintain a modern, friendly yet authoritative SaaS appearance. 
+
+- **Display & Headlines**: Tightly kerned with negative letter-spacing (`-0.02em` to `-0.03em`) to deliver confident, editorial punch across value propositions and section headers.
+- **Body Text**: Tuned for maximum legibility on both warm light canvases and immersive blue gradient surfaces, using balanced line-heights (`1.5` to `1.6`) and subtle gray-navy text tones (`#111144` at 80% opacity).
+- **Stat Callouts**: Bold, high-visibility weights paired directly with reduced label captions (`label-caps`) to produce high-impact quantitative proof points.
+
+## Layout & Spacing
+
+The layout is built on a responsive 12-column fluid grid system centered within a max-width container of `1240px`.
+
+### Responsive Breakpoints & Adapters
+- **Desktop (1024px and above)**: Full 12-column configuration with `1.5rem` gutters and `3rem` side canvas margins. Multi-column cards (3-card or 4-card metric strips) sit horizontally side-by-side.
+- **Tablet (768px – 1023px)**: 8-column layout with `1.25rem` gutters and `2rem` side margins. Multi-column stat groups adapt to a balanced 2x2 grid.
+- **Mobile (below 768px)**: 4-column layout with `1rem` gutters and `1.25rem` outer margins. Data cards, stat groups, and split-screen features collapse into a unified single-column vertical flow.
+
+### Rhythm
+Components rely on strict 8pt base unit multipliers. Primary interactive controls adhere to 48px standard touch targets on mobile and 44px on desktop. Section blocks are separated by `space-2xl` to give room to deep gradient cards and stat callouts.
+
+## Elevation & Depth
+
+Visual hierarchy is communicated through luminous tonal surfaces, subtle glass borders, and tinted ambient shadows rather than traditional murky gray shadows.
+
+### Elevation Levels
+- **Level 0 (Flat Ground)**: Baseline `#F4F1EC` Luster White canvas.
+- **Level 1 (Card & Modular Panes)**: `#FFFFFF` pure white fill with a delicate `1px` stroke using `#DAD1C8` at 60% opacity, elevated by a soft ambient shadow: `0 4px 20px -2px rgba(34, 51, 130, 0.05)`.
+- **Level 2 (Floating Popovers & Hover Cards)**: Pure white or frosted backdrop (`backdrop-filter: blur(12px)`) with `0 12px 32px -4px rgba(34, 51, 130, 0.12)`.
+- **Level 3 (Immersive Focal Containers)**: Linear gradient surfaces transitioning from `#223382` (Deep Space Royal) to `#111144` (Deadly Depths), bordered by a semi-transparent luminous inner stroke (`rgba(155, 172, 216, 0.25)`), creating an ambient blue glow: `0 16px 40px -6px rgba(17, 17, 68, 0.35)`.
+
+## Shapes
+
+The design system employs **Pill-shaped (Level 3)** geometry for all primary interactive elements and navigation anchors, paired with soft, rounded container geometry for structural panels.
+
+- **Buttons & Chips**: Fully rounded pill shapes (`border-radius: 9999px`) provide sleek modern ergonomics and clear affordance.
+- **Cards & Banners**: Elevated cards utilize `rounded-xl` (1.5rem / 24px) to retain an inviting, contemporary tech presence.
+- **Feature Modules & Stat Banners**: Outer gradient containers utilize 28px–32px radii, mirroring top-tier SaaS design patterns.
+
+## Components
+
+### Buttons
+- **Primary Pill**: Fully rounded (`border-radius: 9999px`), background in Deep Space Royal (`#223382`), text in `#FFFFFF`. Hover transitions to `#111144` with a subtle lift shadow `0 4px 14px rgba(34, 51, 130, 0.3)`.
+- **Accent Conversion**: Background in Habañero Orange (`#F98513`), text in `#FFFFFF`, used exclusively for high-intent actions ("Commencer maintenant", "Start Free Trial").
+- **Secondary Outline**: Fully rounded, transparent background, `1.5px` border in `#223382` or `#DAD1C8`, text in `#223382`.
+- **Ghost/Tertiary**: Fully rounded, no border, text in `#223382` with an accompanying directional arrow icon (`→`) that translates 4px on hover.
+
+### Badges & Chips
+- **Pill Badges**: Compact pill styling (`px-3`, `py-1`, `font-size: 12px`, bold).
+  - *New/Active*: Solid `#223382` background with `#FFFFFF` text.
+  - *Accent*: Light `#F98513` tint background (12% opacity) with solid `#F98513` text.
+  - *Informational*: `#9BACD8` tint background (20% opacity) with `#223382` text.
+
+### Stat Banner Cards
+- Deep gradient container (`#223382` to `#111144`) with rounded 24px corners.
+- Segmented stat columns divided by translucent vertical rules (`rgba(255, 255, 255, 0.15)`).
+- Distinctive `#1` highlight card nested inside the container with glassmorphic backing (`rgba(255, 255, 255, 0.1)`) and white typographic hierarchy.
+
+### Feature Cards & Lists
+- **Feature Cards**: White surfaces (`#FFFFFF`) with `1px` subtle border in `#DAD1C8`, soft blue-tinted drop shadow, internal padding of `2rem`. Includes a circular or soft-square Aster Flower Blue (`#9BACD8`) tinted icon container.
+- **Checklist Items**: Compact row layout featuring a solid royal blue circle badge with a white checkmark icon (`✓`), followed by `body-md` typography.
+
+### Input Fields & Controls
+- **Inputs**: Rounded pill or 12px corners, warm white `#FFFFFF` surface with `#DAD1C8` border. Focus state triggers a 2px outer ring in `#223382` with 20% opacity blur.
+- **Radio Buttons & Checkboxes**: 20px controls with a 2px `#DAD1C8` stroke. Checked state transitions to Deep Space Royal (`#223382`) with clean white indicators.
