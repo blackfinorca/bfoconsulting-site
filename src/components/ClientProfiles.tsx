@@ -33,7 +33,7 @@ export const ClientProfiles: React.FC<ClientProfilesProps> = ({ currentLang, onO
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-jodhpur/30 gap-4">
         <div>
-          <div className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-royal bg-aster-light px-3 py-1 rounded-full mb-2">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-royal bg-aster-light px-3 py-1 rounded-full mb-2">
             {currentLang === 'ja' ? '対象クライアント' : 'WHO WE SERVE IN JAPAN'}
           </div>
           <h2 className="text-3xl font-extrabold text-royal-deep tracking-tight">
@@ -51,7 +51,7 @@ export const ClientProfiles: React.FC<ClientProfilesProps> = ({ currentLang, onO
         {/* Market Context Badge */}
         <div className="bg-white p-3.5 rounded-2xl border border-jodhpur/40 shadow-soft shrink-0 text-xs">
           <div className="font-mono font-bold text-royal text-sm tabular-nums">4,572 Properties</div>
-          <div className="text-royal-deep/60 text-[11px]">3,226 Simple Lodging · 1,346 Minpaku</div>
+          <div className="text-royal-deep/65 text-xs">3,226 Simple Lodging · 1,346 Minpaku</div>
         </div>
       </div>
 
@@ -78,8 +78,8 @@ export const ClientProfiles: React.FC<ClientProfilesProps> = ({ currentLang, onO
                   {getIcon(s.id)}
                 </div>
                 <span
-                  className={`text-[10px] font-mono uppercase tracking-wider ${
-                    isActive ? 'text-aster-light' : 'text-royal-deep/50'
+                  className={`text-xs font-mono uppercase tracking-wider ${
+                    isActive ? 'text-aster-light' : 'text-royal-deep/65'
                   }`}
                 >
                   {s.scale}
@@ -108,7 +108,7 @@ export const ClientProfiles: React.FC<ClientProfilesProps> = ({ currentLang, onO
 
             {/* What they need */}
             <div className="p-4 rounded-xl bg-luster/60 border border-jodhpur/30 space-y-1">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-royal">
+              <div className="text-xs font-bold uppercase tracking-wider text-royal">
                 {currentLang === 'ja' ? 'オーナーが直面する課題・ニーズ:' : 'What You Need:'}
               </div>
               <p className="text-xs md:text-sm text-royal-deep/80 leading-relaxed font-medium">
@@ -137,7 +137,7 @@ export const ClientProfiles: React.FC<ClientProfilesProps> = ({ currentLang, onO
           {/* First Offer Card */}
           <div className="md:col-span-5 bg-gradient-to-br from-royal via-[#1a2d7a] to-royal-deep text-white rounded-2xl p-6 shadow-glow-royal flex flex-col justify-between space-y-6">
             <div>
-              <div className="text-[10px] uppercase font-bold tracking-widest text-aster mb-2">
+              <div className="text-xs uppercase font-bold tracking-widest text-aster mb-2">
                 {currentLang === 'ja' ? '最適なファーストステップ' : 'RECOMMENDED FIRST MANDATE'}
               </div>
               <div className="text-xl font-bold leading-snug">

@@ -21,7 +21,7 @@ export const StatsBanner: React.FC<StatsBannerProps> = ({ currentLang }) => {
                 <span className="text-3xl lg:text-4xl font-extrabold text-white font-mono tabular-nums">
                   101,996
                 </span>
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded-full text-white">
+                <span className="text-xs font-bold uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded-full text-white">
                   {currentLang === 'ja' ? '実証分析' : 'Empirical Pool'}
                 </span>
               </div>

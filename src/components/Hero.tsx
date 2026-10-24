@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenConsultation, onO
         <div className="lg:col-span-7 flex flex-col items-start space-y-6">
           {/* Nouveau / Status Pill */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-aster/40 shadow-sm">
-            <span className="bg-habanero text-white text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full">
+            <span className="bg-habanero text-white text-xs font-extrabold uppercase px-2 py-0.5 rounded-full">
               {currentLang === 'ja' ? '最新実証研究' : 'OCTOBER 2026'}
             </span>
             <span className="text-xs font-semibold text-royal">
@@ -38,14 +38,14 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenConsultation, onO
 
             {/* Headline Switcher Pill Tabs */}
             <div className="flex flex-wrap items-center gap-1.5 pt-2">
-              <span className="text-[11px] font-semibold text-royal-deep/60 mr-1">
+              <span className="text-xs font-semibold text-royal-deep/65 mr-1">
                 {currentLang === 'ja' ? '視点を切替:' : 'Focus:'}
               </span>
               {headlines.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveHeadlineIndex(idx)}
-                  className={`text-[11px] font-semibold px-2.5 py-1 rounded-full transition-all cursor-pointer ${
+                  className={`text-xs font-semibold px-2.5 py-1 rounded-full transition-all cursor-pointer ${
                     activeHeadlineIndex === idx
                       ? 'bg-royal text-white shadow-sm'
                       : 'bg-white text-royal-deep/70 hover:bg-aster-light border border-jodhpur/40'
@@ -170,7 +170,7 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenConsultation, onO
               </div>
               <div>
                 <div className="text-xs font-bold text-royal tabular-nums">101,996 Reviews</div>
-                <div className="text-[10px] text-royal-deep/60">367 Kyoto Machiya</div>
+                <div className="text-xs text-royal-deep/65">367 Kyoto Machiya</div>
               </div>
             </div>
 
@@ -181,12 +181,12 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenConsultation, onO
               </div>
               <div>
                 <div className="text-xs font-bold text-royal-deep tabular-nums">49% Independent</div>
-                <div className="text-[10px] text-royal-deep/60">Single-Licence Holders</div>
+                <div className="text-xs text-royal-deep/65">Single-Licence Holders</div>
               </div>
             </div>
 
             {/* Floating Micro Badge (Center Right) */}
-            <div className="absolute top-1/2 -right-2 z-20 -translate-y-1/2 bg-royal text-white px-2.5 py-1 rounded-full shadow text-[10px] font-bold flex items-center gap-1">
+            <div className="absolute top-1/2 -right-2 z-20 -translate-y-1/2 bg-royal text-white px-2.5 py-1 rounded-full shadow text-xs font-bold flex items-center gap-1">
               <Sparkles className="w-3 h-3 text-habanero" />
               <span>¥47k vs ¥52k Parity</span>
             </div>

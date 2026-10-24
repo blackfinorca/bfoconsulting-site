@@ -80,7 +80,7 @@ export const CoreValuesSection: React.FC<CoreValuesSectionProps> = ({ currentLan
                     <h3 className="text-base md:text-lg font-bold text-royal-deep">
                       {currentLang === 'ja' ? val.titleJa : val.title}
                     </h3>
-                    <span className="text-[10px] font-bold uppercase text-aster tracking-widest font-mono">
+                    <span className="text-xs font-bold uppercase text-aster tracking-widest font-mono">
                       0{idx + 1}
                     </span>
                   </div>
@@ -89,7 +89,7 @@ export const CoreValuesSection: React.FC<CoreValuesSectionProps> = ({ currentLan
                   </p>
                   <div className="mt-3 pt-3 border-t border-jodhpur/30 flex flex-wrap items-center justify-between gap-2">
                     <div className="text-xs font-semibold text-royal">
-                      <span className="text-royal-deep/60 mr-1.5">
+                      <span className="text-royal-deep/65 mr-1.5">
                         {currentLang === 'ja' ? '実証根拠:' : 'Evidence:'}
                       </span>
                       <span>{currentLang === 'ja' ? val.evidenceJa : val.evidence}</span>

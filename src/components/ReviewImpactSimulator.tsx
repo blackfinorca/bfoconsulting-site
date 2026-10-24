@@ -37,7 +37,7 @@ export const ReviewImpactSimulator: React.FC<ReviewImpactSimulatorProps> = ({ cu
     <section id="review-simulator" className="max-w-6xl mx-auto px-4 md:px-8 py-12">
       <div className="bg-surface-pure rounded-card p-6 md:p-10 border border-jodhpur/40 shadow-soft">
         <div className="max-w-3xl mb-8">
-          <div className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-royal bg-aster-light px-3 py-1 rounded-full mb-2">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-royal bg-aster-light px-3 py-1 rounded-full mb-2">
             {currentLang === 'ja' ? '減点インパクト & 投資回収計算' : 'COMPLAINT COST ENGINE'}
           </div>
           <h2 className="text-2xl md:text-3xl font-extrabold text-royal-deep tracking-tight">
@@ -84,7 +84,7 @@ export const ReviewImpactSimulator: React.FC<ReviewImpactSimulatorProps> = ({ cu
                       </div>
                       <div>
                         <div className="text-xs md:text-sm font-bold text-royal-deep">{item.name}</div>
-                        <div className="text-[11px] text-royal-deep/60 mt-0.5">{item.description}</div>
+                        <div className="text-xs text-royal-deep/65 mt-0.5">{item.description}</div>
                       </div>
                     </div>
 
@@ -92,7 +92,7 @@ export const ReviewImpactSimulator: React.FC<ReviewImpactSimulatorProps> = ({ cu
                       <div className="text-sm font-extrabold text-red-600 font-mono tabular-nums">
                         -{item.scoreCost.toFixed(2)} pts
                       </div>
-                      <div className="text-[10px] text-royal-deep/50 font-mono">
+                      <div className="text-xs text-royal-deep/65 font-mono">
                         ~¥{item.monthlyCostToFix.toLocaleString()}/mo
                       </div>
                     </div>
@@ -118,7 +118,7 @@ export const ReviewImpactSimulator: React.FC<ReviewImpactSimulatorProps> = ({ cu
                 onChange={(e) => setPropertyAdr(Number(e.target.value))}
                 className="w-full h-2 bg-jodhpur/60 rounded-lg appearance-none cursor-pointer accent-royal"
               />
-              <div className="flex items-center justify-between text-[11px] text-royal-deep/60">
+              <div className="flex items-center justify-between text-xs text-royal-deep/65">
                 <span>
                   {currentLang === 'ja' ? '月間稼働日数:' : 'Operating Nights:'} {monthlyNights} nights/mo
                 </span>
@@ -134,10 +134,10 @@ export const ReviewImpactSimulator: React.FC<ReviewImpactSimulatorProps> = ({ cu
           <div className="lg:col-span-5 flex flex-col space-y-4">
             <div className="bg-gradient-to-br from-royal via-royal to-royal-deep text-white rounded-2xl p-6 shadow-glow-royal">
               <div className="flex items-center justify-between pb-3 border-b border-white/15">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-aster">
+                <span className="text-xs font-bold uppercase tracking-wider text-aster">
                   {currentLang === 'ja' ? '試算結果' : 'FINANCIAL ANALYSIS'}
                 </span>
-                <span className="text-[11px] font-mono text-white/70">7% Per-Point Model</span>
+                <span className="text-xs font-mono text-white/70">7% Per-Point Model</span>
               </div>
 
               {/* Total Point Drag */}
@@ -190,7 +190,7 @@ export const ReviewImpactSimulator: React.FC<ReviewImpactSimulatorProps> = ({ cu
                     {currentLang === 'ja' ? '損益分岐ADR基準:' : 'Break-Even Baseline ADR:'}
                   </span>
                 </div>
-                <div className="text-white/80 leading-relaxed text-[11px]">
+                <div className="text-white/80 leading-relaxed text-xs">
                   {propertyAdr >= 94000 ? (
                     <span className="text-emerald-300 font-semibold">
                       {currentLang === 'ja'
@@ -210,7 +210,7 @@ export const ReviewImpactSimulator: React.FC<ReviewImpactSimulatorProps> = ({ cu
               </div>
 
               {/* Explicit Assumption Disclaimer */}
-              <div className="mt-3 text-[10px] text-white/50 leading-tight">
+              <div className="mt-3 text-xs text-white/70 leading-tight">
                 * {currentLang === 'ja'
                   ? '注意：1点あたり7%は過去データに基づく仮定値であり、売上増加を法的に保証するものではありません。'
                   : 'Note: The 7% per point is an explicit analytical assumption based on historical pacing, not a promised revenue uplift.'}
@@ -224,7 +224,7 @@ export const ReviewImpactSimulator: React.FC<ReviewImpactSimulatorProps> = ({ cu
                   <ShieldCheck className="w-4 h-4 text-royal" />
                   {currentLang === 'ja' ? '日本人ゲスト比率のスコア補正' : 'Japanese Guest Score Normalizer'}
                 </span>
-                <span className="text-[10px] bg-aster-light text-royal px-2 py-0.5 rounded-full font-bold">
+                <span className="text-xs bg-aster-light text-royal px-2 py-0.5 rounded-full font-bold">
                   -0.53 pt baseline
                 </span>
               </div>
@@ -251,7 +251,7 @@ export const ReviewImpactSimulator: React.FC<ReviewImpactSimulatorProps> = ({ cu
                 />
               </div>
 
-              <div className="p-2.5 rounded-lg bg-luster/70 text-[11px] text-royal-deep/80 flex items-center justify-between">
+              <div className="p-2.5 rounded-lg bg-luster/70 text-xs text-royal-deep/80 flex items-center justify-between">
                 <span>{currentLang === 'ja' ? '構造的スコア補正幅:' : 'Structural Score Adjustment:'}</span>
                 <span className="font-mono font-bold text-royal">
                   +{guestAdjustment.adjustmentDelta} pts (Norm: {guestAdjustment.normalizedScore})

@@ -27,5 +27,21 @@
     margin: 0;
     padding: 0;
     font-family: 'Plus Jakarta Sans', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+    background-color: #F4F1EC;
+  }
+}
+
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-royal);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

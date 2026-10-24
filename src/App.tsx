@@ -10,14 +10,19 @@ import { ServicesPage } from './pages/ServicesPage';
 import { PortfolioPage } from './pages/PortfolioPage';
 import { ContactPage } from './pages/ContactPage';
 import { Footer } from './components/Footer';
+import { LiquidBackground } from './components/LiquidBackground';
 import { Language } from './data/content';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<PageTab>('home');
+  const [activeTab, setActiveTab] = useState<PageTab>(() => {
+    const h = window.location.hash.slice(1) as PageTab;
+    return ['home', 'services', 'portfolio', 'contact'].includes(h) ? h : 'home';
+  });
   const [currentLang, setCurrentLang] = useState<Language>('en');
 
   const handleNavigate = (tab: PageTab) => {
     setActiveTab(tab);
+    window.history.replaceState(null, '', `#${tab}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -26,7 +31,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-luster text-royal-deep flex flex-col font-sans selection:bg-habanero selection:text-white">
+    <>
+    <LiquidBackground />
+    <div className="relative z-10 min-h-screen text-royal-deep flex flex-col font-sans selection:bg-habanero selection:text-white">
       {/* Top Floating Page Navigation */}
       <Header
         activeTab={activeTab}
@@ -54,5 +61,6 @@ export default function App() {
       {/* Footer */}
       <Footer currentLang={currentLang} onNavigate={handleNavigate} />
     </div>
+    </>
   );
 }

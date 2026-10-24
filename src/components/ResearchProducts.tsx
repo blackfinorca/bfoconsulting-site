@@ -16,10 +16,10 @@ export const ResearchProducts: React.FC<ResearchProductsProps> = ({ currentLang,
         return (
           <div className="relative rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-royal via-[#1a2d7a] to-royal-deep h-44 flex flex-col justify-between p-4 text-white">
             <div className="flex items-center justify-between">
-              <span className="bg-habanero text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow">
+              <span className="bg-habanero text-white text-xs font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow">
                 Flagship Research
               </span>
-              <span className="text-[10px] font-mono text-white/60">61 Pages</span>
+              <span className="text-xs font-mono text-white/70">61 Pages</span>
             </div>
             <div>
               <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center mb-2">
@@ -36,10 +36,10 @@ export const ResearchProducts: React.FC<ResearchProductsProps> = ({ currentLang,
         return (
           <div className="relative rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-[#1b2b65] via-royal to-royal-deep h-44 flex flex-col justify-between p-4 text-white">
             <div className="flex items-center justify-between">
-              <span className="bg-royal-deep text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow border border-white/20">
+              <span className="bg-royal-deep text-white text-xs font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow border border-white/20">
                 Operations Kit
               </span>
-              <span className="text-[10px] font-mono text-white/60">54 Items</span>
+              <span className="text-xs font-mono text-white/70">54 Items</span>
             </div>
             <div>
               <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center mb-2">
@@ -56,10 +56,10 @@ export const ResearchProducts: React.FC<ResearchProductsProps> = ({ currentLang,
         return (
           <div className="relative rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-royal-deep via-[#111144] to-[#201d4a] h-44 flex flex-col justify-between p-4 text-white">
             <div className="flex items-center justify-between">
-              <span className="bg-royal text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow">
+              <span className="bg-royal text-white text-xs font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow">
                 Distribution Manual
               </span>
-              <span className="text-[10px] font-mono text-white/60">38 Pages</span>
+              <span className="text-xs font-mono text-white/70">38 Pages</span>
             </div>
             <div>
               <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center mb-2">
@@ -82,7 +82,7 @@ export const ResearchProducts: React.FC<ResearchProductsProps> = ({ currentLang,
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-jodhpur/30">
         <div>
-          <div className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-habanero bg-habanero/10 px-3 py-1 rounded-full mb-2">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-habanero bg-habanero/10 px-3 py-1 rounded-full mb-2">
             {currentLang === 'ja' ? '研究成果・刊行物' : 'RESEARCH PRODUCTS'}
           </div>
           <h2 className="text-3xl font-extrabold text-royal-deep tracking-tight">
@@ -91,7 +91,7 @@ export const ResearchProducts: React.FC<ResearchProductsProps> = ({ currentLang,
               : 'Independent Kyoto Research Publications'}
           </h2>
         </div>
-        <div className="text-xs font-semibold text-royal-deep/60 mt-2 md:mt-0 font-mono">
+        <div className="text-xs font-semibold text-royal-deep/65 mt-2 md:mt-0 font-mono">
           {currentLang === 'ja' ? '2026年10月 最新版 // 無料サンプルあり' : 'OCTOBER 2026 EDITIONS · FREE SAMPLES'}
         </div>
       </div>
@@ -106,7 +106,7 @@ export const ResearchProducts: React.FC<ResearchProductsProps> = ({ currentLang,
             <div>
               {getProductCover(item.id)}
 
-              <div className="text-[11px] font-semibold text-aster uppercase tracking-wider mb-1 font-mono">
+              <div className="text-xs font-semibold text-aster uppercase tracking-wider mb-1 font-mono">
                 {item.edition} · {item.pagesOrItems}
               </div>
 
@@ -120,7 +120,7 @@ export const ResearchProducts: React.FC<ResearchProductsProps> = ({ currentLang,
             </div>
 
             <div className="pt-4 mt-4 border-t border-jodhpur/30 flex items-center justify-between">
-              <span className="text-[10px] font-bold text-royal uppercase tracking-wider">
+              <span className="text-xs font-bold text-royal uppercase tracking-wider">
                 {item.coverTag}
               </span>
 

@@ -54,35 +54,35 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
       {/* Header Banner */}
       <section className="max-w-5xl mx-auto px-4 md:px-8 py-8">
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-aster-light text-royal text-xs font-bold uppercase tracking-wider">
-            {currentLang === 'ja' ? '提供サービス & 価値' : 'WHAT WE DO & VALUE TO CLIENTS'}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-aster-light text-royal text-sm font-bold uppercase tracking-wider">
+            {currentLang === 'ja' ? 'サービスと価値' : 'Services and value'}
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold text-royal-deep tracking-tight">
             {currentLang === 'ja'
-              ? '小規模宿泊施設のための実務サービス & カスタムAI自動化'
-              : 'Core Remote Services & Custom AI Agents for Independent Owners'}
+              ? '小規模宿泊施設のためのリモートサービス'
+              : 'Remote services for independent owners'}
           </h1>
-          <p className="text-xs md:text-sm text-royal-deep/75 leading-relaxed">
+          <p className="text-base text-royal-deep/75 leading-relaxed">
             {currentLang === 'ja'
-              ? 'すべてのサービスは、OTAの管理画面情報や予約データをもとに完全リモートで実行され、カスタムAIエージェントによる日々の運営自動化まで対応します。'
-              : "Each service runs remotely from your channel logins and booking exports, extending to custom AI agents that automate everyday host operations."}
+              ? 'OTAの管理画面と予約データから、すべてリモートで実施します。'
+              : 'Every service runs remotely from your channel logins and booking exports.'}
           </p>
         </div>
       </section>
 
       {/* Part 1: What Are We Doing (Core Services & AI Agents) */}
       <section className="max-w-5xl mx-auto px-4 md:px-8 py-6">
-        <div className="flex items-center justify-between mb-6 pb-3 border-b border-jodhpur/30">
+        <div className="flex items-center justify-between mb-6 pb-3 border-b border-jodhpur/40">
           <div>
-            <span className="text-[10px] font-bold uppercase text-aster tracking-widest font-mono">
+            <span className="text-sm font-bold uppercase text-aster tracking-widest font-mono">
               SECTION 01
             </span>
             <h2 className="text-xl md:text-2xl font-extrabold text-royal-deep">
-              {currentLang === 'ja' ? 'サービス内容（優先順位順）' : 'What We Do'}
+              {currentLang === 'ja' ? 'サービス内容' : 'What we do'}
             </h2>
           </div>
-          <div className="text-xs font-semibold text-royal-deep/60 hidden sm:block">
-            {currentLang === 'ja' ? '完全リモート提供' : '100% Remote Delivery'}
+          <div className="text-sm font-semibold text-royal-deep/65 hidden sm:block">
+            {currentLang === 'ja' ? '完全リモート' : '100% remote'}
           </div>
         </div>
 
@@ -113,41 +113,41 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
                         {currentLang === 'ja' ? srv.titleJa : srv.title}
                       </h3>
                       {srv.id === 'ai_agents' && (
-                        <span className="bg-habanero text-white text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full shadow-sm">
+                        <span className="bg-habanero text-white text-sm font-extrabold uppercase px-2 py-0.5 rounded-full shadow-sm">
                           {currentLang === 'ja' ? 'AI自動化' : 'Custom AI'}
                         </span>
                       )}
                     </div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-aster font-mono">
+                    <span className="text-sm font-bold uppercase tracking-wider text-aster font-mono">
                       SERVICE {srv.order}
                     </span>
                   </div>
 
-                  <p className="text-xs md:text-sm text-royal-deep/80 leading-relaxed font-medium">
+                  <p className="text-sm md:text-base text-royal-deep/80 leading-relaxed font-medium">
                     {currentLang === 'ja' ? srv.whatWeDoJa : srv.whatWeDo}
                   </p>
 
-                  <div className="p-3 rounded-xl bg-luster/60 border border-jodhpur/30 text-xs">
-                    <div className="font-bold text-royal text-[11px] uppercase tracking-wider mb-0.5">
-                      {currentLang === 'ja' ? '日本の法規・市場への特化:' : 'Japan Focus:'}
+                  <div className="p-3 rounded-xl bg-luster/60 border border-jodhpur/30 text-sm">
+                    <div className="font-bold text-royal text-sm uppercase tracking-wider mb-0.5">
+                      {currentLang === 'ja' ? '日本向け:' : 'Japan focus:'}
                     </div>
                     <div className="text-royal-deep/70">
                       {currentLang === 'ja' ? srv.japanFocusJa : srv.japanFocus}
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-jodhpur/30 text-xs">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-jodhpur/30 text-sm">
                     <div className="flex items-center gap-1.5 text-royal font-semibold">
                       <CheckCircle2 className="w-3.5 h-3.5 text-habanero shrink-0" />
                       <span>
-                        <strong className="text-royal-deep/60 mr-1">
-                          {currentLang === 'ja' ? '納品物:' : 'The owner receives:'}
+                        <strong className="text-royal-deep/65 mr-1">
+                          {currentLang === 'ja' ? '納品物:' : 'You receive:'}
                         </strong>
                         {currentLang === 'ja' ? srv.deliverableJa : srv.deliverable}
                       </span>
                     </div>
 
-                    <div className="flex items-center gap-1 text-royal-deep/50 shrink-0 font-mono text-[11px]">
+                    <div className="flex items-center gap-1 text-royal-deep/65 shrink-0 font-mono text-sm">
                       <Clock className="w-3 h-3" />
                       <span>{srv.timeline}</span>
                     </div>
@@ -161,17 +161,17 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
 
       {/* Part 2: Value for Clients (The 5 Values & Evidence) */}
       <section className="max-w-5xl mx-auto px-4 md:px-8 py-12">
-        <div className="flex items-center justify-between mb-6 pb-3 border-b border-jodhpur/30">
+        <div className="flex items-center justify-between mb-6 pb-3 border-b border-jodhpur/40">
           <div>
-            <span className="text-[10px] font-bold uppercase text-aster tracking-widest font-mono">
+            <span className="text-sm font-bold uppercase text-aster tracking-widest font-mono">
               SECTION 02
             </span>
             <h2 className="text-xl md:text-2xl font-extrabold text-royal-deep">
-              {currentLang === 'ja' ? 'クライアントへの5つの価値' : 'Value to Clients'}
+              {currentLang === 'ja' ? '5つの価値' : 'Why BFO'}
             </h2>
           </div>
-          <p className="text-xs text-royal-deep/60 hidden sm:block">
-            {currentLang === 'ja' ? '自館のレビューだけでは見えない客観的根拠' : 'Evidence you cannot get from your own reviews'}
+          <p className="text-sm text-royal-deep/65 hidden sm:block">
+            {currentLang === 'ja' ? '自館のレビューだけでは見えない根拠' : 'Evidence your own reviews cannot give'}
           </p>
         </div>
 
@@ -193,19 +193,19 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
                       {currentLang === 'ja' ? val.titleJa : val.title}
                     </h3>
                   </div>
-                  <span className="text-[10px] font-mono text-royal-deep/40 font-bold">
+                  <span className="text-sm font-mono text-royal-deep/65 font-bold">
                     0{idx + 1}
                   </span>
                 </div>
 
-                <p className="text-xs md:text-sm text-royal-deep/75 leading-relaxed">
+                <p className="text-sm md:text-base text-royal-deep/75 leading-relaxed">
                   {currentLang === 'ja' ? val.meaningJa : val.meaning}
                 </p>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-jodhpur/30 text-xs">
-                <span className="text-[11px] font-bold text-royal-deep/60 mr-1.5 uppercase tracking-wider">
-                  {currentLang === 'ja' ? '実証データ:' : 'Evidence:'}
+              <div className="mt-4 pt-3 border-t border-jodhpur/30 text-sm">
+                <span className="text-sm font-bold text-royal-deep/65 mr-1.5 uppercase tracking-wider">
+                  {currentLang === 'ja' ? '根拠:' : 'Evidence:'}
                 </span>
                 <span className="font-semibold text-royal">
                   {currentLang === 'ja' ? val.evidenceJa : val.evidence}
@@ -218,18 +218,18 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
 
       {/* Part 3: Tailored Solutions for Independent Operators */}
       <section className="max-w-5xl mx-auto px-4 md:px-8 py-10">
-        <div className="flex items-center justify-between mb-6 pb-3 border-b border-jodhpur/30">
+        <div className="flex items-center justify-between mb-6 pb-3 border-b border-jodhpur/40">
           <div>
-            <span className="text-[10px] font-bold uppercase text-aster tracking-widest font-mono">
+            <span className="text-sm font-bold uppercase text-aster tracking-widest font-mono">
               SECTION 03
             </span>
             <h2 className="text-xl md:text-2xl font-extrabold text-royal-deep">
               {currentLang === 'ja'
-                ? '宿泊規模別の最適ソリューション'
-                : 'Tailored Solutions for Independent Operators'}
+                ? '規模別の提案'
+                : 'Solutions by size'}
             </h2>
           </div>
-          <span className="text-xs font-mono text-royal bg-aster-light px-2.5 py-0.5 rounded-full font-bold">
+          <span className="text-sm font-mono text-royal bg-aster-light px-2.5 py-0.5 rounded-full font-bold">
             4 Segments
           </span>
         </div>
@@ -257,14 +257,14 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
                     {getSegmentIcon(seg.id)}
                   </div>
                   <span
-                    className={`text-[9px] font-mono uppercase ${
-                      isSelected ? 'text-aster-light' : 'text-royal-deep/50'
+                    className={`text-sm font-mono uppercase ${
+                      isSelected ? 'text-aster-light' : 'text-royal-deep/65'
                     }`}
                   >
                     {seg.scale}
                   </span>
                 </div>
-                <div className="text-xs font-bold leading-tight line-clamp-2">
+                <div className="text-sm font-bold leading-tight line-clamp-2">
                   {currentLang === 'ja' ? seg.titleJa : seg.title}
                 </div>
               </button>
@@ -276,7 +276,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
         <div className="bg-surface-pure rounded-card p-6 md:p-8 border border-jodhpur/40 shadow-soft">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             <div className="md:col-span-7 space-y-4">
-              <div className="text-xs font-bold text-royal bg-aster-light px-3 py-1 rounded-full w-fit font-mono">
+              <div className="text-sm font-bold text-royal bg-aster-light px-3 py-1 rounded-full w-fit font-mono">
                 {currentSegment.scale}
               </div>
               <h3 className="text-xl font-extrabold text-royal-deep">
@@ -284,20 +284,20 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
               </h3>
 
               <div className="p-3.5 rounded-xl bg-luster/60 border border-jodhpur/30 space-y-1">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-royal">
-                  {currentLang === 'ja' ? '必要なこと (What they need):' : 'What You Need:'}
+                <div className="text-sm font-bold uppercase tracking-wider text-royal">
+                  {currentLang === 'ja' ? '必要なこと:' : 'What you need:'}
                 </div>
-                <p className="text-xs md:text-sm text-royal-deep/80 font-medium leading-relaxed">
+                <p className="text-sm md:text-base text-royal-deep/80 font-medium leading-relaxed">
                   {currentLang === 'ja' ? currentSegment.needsJa : currentSegment.needs}
                 </p>
               </div>
 
               <div className="space-y-1.5 pt-1">
-                <div className="text-xs font-bold text-royal-deep uppercase tracking-wider">
-                  {currentLang === 'ja' ? '推奨アクション手順:' : 'Action Protocol:'}
+                <div className="text-sm font-bold text-royal-deep uppercase tracking-wider">
+                  {currentLang === 'ja' ? '進め方:' : 'Steps:'}
                 </div>
                 {currentSegment.recommendedWorkflow.map((step, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-royal-deep/80">
+                  <div key={i} className="flex items-center gap-2 text-sm text-royal-deep/80">
                     <div className="w-3.5 h-3.5 rounded-full bg-aster-light text-royal flex items-center justify-center shrink-0">
                       ✓
                     </div>
@@ -308,20 +308,20 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
             </div>
 
             <div className="md:col-span-5 bg-gradient-to-br from-royal via-royal to-royal-deep text-white rounded-2xl p-6 shadow-glow-royal space-y-4">
-              <div className="text-[10px] uppercase font-bold tracking-widest text-aster">
-                {currentLang === 'ja' ? '初回の推奨オファー' : 'FIRST OFFER'}
+              <div className="text-sm uppercase font-bold tracking-widest text-aster">
+                {currentLang === 'ja' ? '最初のご提案' : 'FIRST OFFER'}
               </div>
               <div className="text-lg font-bold leading-snug">
                 {currentLang === 'ja' ? currentSegment.firstOfferJa : currentSegment.firstOffer}
               </div>
-              <p className="text-xs text-white/70 leading-relaxed">
+              <p className="text-sm text-white/70 leading-relaxed">
                 {currentLang === 'ja'
-                  ? '物件の予約CSVエクスポートとOTA掲載設定をもとに、5営業日以内に診断結果を納品します。'
-                  : 'Delivered in 5 business days using your actual booking export and channel manager settings.'}
+                  ? '予約CSVとOTA設定から、5営業日で納品します。'
+                  : 'Delivered in 5 business days from your booking export and channel settings.'}
               </p>
               <button
                 onClick={() => onNavigate('contact')}
-                className="w-full bg-habanero hover:bg-habanero-hover text-white font-bold text-xs py-2.5 rounded-pill shadow-soft transition flex items-center justify-center gap-1.5 cursor-pointer"
+                className="w-full bg-habanero hover:bg-habanero-hover text-white font-bold text-sm py-2.5 rounded-pill shadow-soft transition flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <span>{currentLang === 'ja' ? 'お問い合わせ' : 'Contact Us'}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -337,26 +337,26 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
           <div>
             <h3 className="text-lg font-bold text-royal-deep">
               {currentLang === 'ja'
-                ? '自館の町家に最適なサービスについて相談する'
-                : 'Ready to benchmark your house against 367 properties?'}
+                ? 'どのサービスが合うか相談する'
+                : 'Ready to benchmark your house?'}
             </h3>
-            <p className="text-xs text-royal-deep/70 mt-1">
+            <p className="text-sm text-royal-deep/70 mt-1">
               {currentLang === 'ja'
-                ? 'ご質問やお見積もりは、お問い合わせページよりお気軽にお送りください。'
-                : 'Send your inquiry or property details via our direct contact form.'}
+                ? 'ご質問・お見積もりはお問い合わせページから。'
+                : 'Send your question through the contact form.'}
             </p>
           </div>
           <div className="flex items-center gap-3 shrink-0 flex-wrap">
             <a
               href="mailto:hello@bfoconsult.ing"
-              className="bg-white hover:bg-luster text-royal-deep font-mono text-xs px-4 py-2.5 rounded-pill border border-jodhpur/50 transition flex items-center gap-2"
+              className="bg-white hover:bg-luster text-royal-deep font-mono text-sm px-4 py-2.5 rounded-pill border border-jodhpur/50 transition flex items-center gap-2"
             >
               <Mail className="w-3.5 h-3.5 text-habanero" />
               <span>hello@bfoconsult.ing</span>
             </a>
             <button
               onClick={() => onNavigate('contact')}
-              className="bg-habanero hover:bg-habanero-hover text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-pill shadow-soft transition cursor-pointer shrink-0 flex items-center gap-2"
+              className="bg-habanero hover:bg-habanero-hover text-white font-bold text-sm sm:text-base px-6 py-3 rounded-pill shadow-soft transition cursor-pointer shrink-0 flex items-center gap-2"
             >
               <span>{currentLang === 'ja' ? 'お問い合わせ' : 'Contact Us'}</span>
               <ArrowRight className="w-4 h-4" />

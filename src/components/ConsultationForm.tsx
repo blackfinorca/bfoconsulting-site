@@ -37,7 +37,7 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({ currentLang 
           {/* Left Column: Advisory & Bilateral NDA Guarantee */}
           <div className="lg:col-span-5 bg-gradient-to-br from-royal via-royal to-royal-deep text-white p-8 md:p-12 flex flex-col justify-between">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-[11px] font-bold uppercase tracking-wider mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-wider mb-4">
                 {currentLang === 'ja' ? '守秘義務保証 // 個別診断' : 'CONFIDENTIAL ADVISORY'}
               </div>
 
@@ -55,7 +55,7 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({ currentLang 
 
               {/* Bilateral NDA Protection Box */}
               <div className="p-4 rounded-xl bg-white/10 border border-white/10 text-xs text-white/80 space-y-1.5">
-                <div className="font-bold text-white uppercase text-[11px] flex items-center gap-1.5">
+                <div className="font-bold text-white uppercase text-xs flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-habanero" />
                   <span>{currentLang === 'ja' ? '二国間・相互NDA完全保護' : 'Bilateral Japan NDA Protection'}</span>
                 </div>
@@ -105,7 +105,7 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({ currentLang 
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder={currentLang === 'ja' ? '例: 高橋 健二郎' : 'e.g. Kenjiro Takahashi'}
-                      className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/40 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
+                      className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/65 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
                     />
                   </div>
 
@@ -119,7 +119,7 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({ currentLang 
                       value={formData.entityName}
                       onChange={(e) => setFormData({ ...formData, entityName: e.target.value })}
                       placeholder={currentLang === 'ja' ? '例: 平安町家リゾート合同会社' : 'e.g. Heian Machiya GK'}
-                      className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/40 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
+                      className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/65 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
                     />
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({ currentLang 
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="owner@capital.jp"
-                      className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/40 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
+                      className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/65 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
                     />
                   </div>
 
@@ -148,7 +148,7 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({ currentLang 
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+81 90 0000 0000"
-                      className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/40 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
+                      className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/65 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
                     />
                   </div>
                 </div>
@@ -218,7 +218,7 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({ currentLang 
                         ? '例: Booking.comの実質手数料が高すぎる、180日上限の消化ペース、直近のレビュー減点、清掃の品質管理など...'
                         : 'Outline specific concerns: high OTA commissions, stacked Genius discounts, 180-day cap pacing, recent rating drops...'
                     }
-                    className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/40 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
+                    className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/65 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
                   />
                 </div>
 
@@ -231,7 +231,7 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({ currentLang 
                     <Send className="w-4 h-4" />
                   </button>
 
-                  <div className="flex items-center justify-center gap-2 text-[11px] text-royal-deep/60 mt-3">
+                  <div className="flex items-center justify-center gap-2 text-xs text-royal-deep/65 mt-3">
                     <Lock className="w-3.5 h-3.5 text-royal" />
                     <span>256-Bit SSL Encrypted · Automatic Institutional Bilateral NDA Protection</span>
                   </div>
@@ -243,7 +243,7 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({ currentLang 
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[11px] font-mono font-bold text-royal uppercase tracking-wider">
+                  <span className="text-xs font-mono font-bold text-royal uppercase tracking-wider">
                     CONFIRMATION REF: {referenceId}
                   </span>
                   <h3 className="text-2xl font-bold text-royal-deep">

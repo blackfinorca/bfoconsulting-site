@@ -82,7 +82,7 @@ export const OtaYieldMatrix: React.FC<OtaYieldMatrixProps> = ({ currentLang, onO
         {/* Header Block */}
         <div className="flex flex-col md:flex-row md:items-end justify-between pb-6 border-b border-jodhpur/30 gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-royal bg-aster-light px-3 py-1 rounded-full mb-2">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-royal bg-aster-light px-3 py-1 rounded-full mb-2">
               {currentLang === 'ja' ? '客観的市場基準' : 'EMPIRICAL BENCHMARKS'}
             </div>
             <h2 className="text-2xl md:text-3xl font-extrabold text-royal-deep tracking-tight">
@@ -146,7 +146,7 @@ export const OtaYieldMatrix: React.FC<OtaYieldMatrixProps> = ({ currentLang, onO
                   onChange={(e) => setTestAdr(Number(e.target.value))}
                   className="w-full h-2 bg-jodhpur/60 rounded-lg appearance-none cursor-pointer accent-royal"
                 />
-                <div className="flex justify-between text-[10px] text-royal-deep/50 font-mono">
+                <div className="flex justify-between text-xs text-royal-deep/65 font-mono">
                   <span>¥25,000 (Entry)</span>
                   <span>¥47k–¥52k (Kyoto Avg)</span>
                   <span>¥94,000 (Break-even)</span>
@@ -159,7 +159,7 @@ export const OtaYieldMatrix: React.FC<OtaYieldMatrixProps> = ({ currentLang, onO
                   <div className="text-xs font-bold text-royal-deep">
                     {currentLang === 'ja' ? '多重割引（Genius/モバイル）の重複' : 'Stacked Discounts Simulated'}
                   </div>
-                  <div className="text-[11px] text-royal-deep/60">
+                  <div className="text-xs text-royal-deep/65">
                     {includeStackedPromotions
                       ? currentLang === 'ja'
                         ? 'OTAデフォルトの自動割引重複を適用中'
@@ -187,7 +187,7 @@ export const OtaYieldMatrix: React.FC<OtaYieldMatrixProps> = ({ currentLang, onO
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse text-xs md:text-sm">
                 <thead>
-                  <tr className="bg-luster/60 text-royal font-bold text-[11px] uppercase tracking-wider rounded-xl">
+                  <tr className="bg-luster/60 text-royal font-bold text-xs uppercase tracking-wider rounded-xl">
                     <th className="py-3 px-4 rounded-l-xl">
                       {currentLang === 'ja' ? '販売チャネル' : 'Distribution Channel'}
                     </th>
@@ -232,14 +232,14 @@ export const OtaYieldMatrix: React.FC<OtaYieldMatrixProps> = ({ currentLang, onO
                           {ch.baseCommissionPct}%
                           {ch.paymentFeePct > 0 ? ` + ${ch.paymentFeePct}% fee` : ''}
                           {includeStackedPromotions && ch.typicalStackedDiscountsPct > 0 ? (
-                            <span className="text-[10px] text-habanero ml-1 font-semibold">
+                            <span className="text-xs text-habanero ml-1 font-semibold">
                               (+{ch.typicalStackedDiscountsPct}% stack)
                             </span>
                           ) : null}
                         </td>
                         <td className="py-3.5 px-4 font-mono font-bold text-royal">
                           ¥{res.netRatePer100Yen.toFixed(1)}{' '}
-                          <span className="text-[10px] text-royal-deep/50 font-normal">
+                          <span className="text-xs text-royal-deep/65 font-normal">
                             (-{res.effectiveTakeRatePct.toFixed(1)}%)
                           </span>
                         </td>
@@ -286,7 +286,7 @@ export const OtaYieldMatrix: React.FC<OtaYieldMatrixProps> = ({ currentLang, onO
           <div className="mt-6 overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs md:text-sm">
               <thead>
-                <tr className="bg-luster/60 text-royal font-bold text-[11px] uppercase tracking-wider rounded-xl">
+                <tr className="bg-luster/60 text-royal font-bold text-xs uppercase tracking-wider rounded-xl">
                   <th className="py-3 px-4 rounded-l-xl">Distribution Portal</th>
                   <th className="py-3 px-4">Average Gross ADR</th>
                   <th className="py-3 px-4">Take-Rate Commission</th>
@@ -331,7 +331,7 @@ export const OtaYieldMatrix: React.FC<OtaYieldMatrixProps> = ({ currentLang, onO
                       }`}
                     >
                       ¥{row.netRevPAR.toLocaleString()}{' '}
-                      <span className={`text-[10px] px-2 py-0.5 rounded-full ml-1 ${row.badgeColor}`}>
+                      <span className={`text-xs px-2 py-0.5 rounded-full ml-1 ${row.badgeColor}`}>
                         {row.badge}
                       </span>
                     </td>

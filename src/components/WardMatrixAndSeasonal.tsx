@@ -17,10 +17,10 @@ export const WardMatrixAndSeasonal: React.FC<WardMatrixAndSeasonalProps> = ({ cu
         <div className="lg:col-span-7 bg-surface-pure rounded-card p-6 md:p-8 border border-jodhpur/40 shadow-soft flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between pb-3 border-b border-jodhpur/30 mb-4">
-              <span className="text-[11px] font-bold uppercase text-royal bg-aster-light px-3 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase text-royal bg-aster-light px-3 py-1 rounded-full">
                 {currentLang === 'ja' ? '価格弾力性モデル' : 'Dynamic Yield Theory'}
               </span>
-              <span className="text-xs font-semibold text-royal-deep/60">
+              <span className="text-xs font-semibold text-royal-deep/65">
                 {currentLang === 'ja' ? '京都文化カレンダー12ヶ月' : 'Kyoto Cultural Calendar'}
               </span>
             </div>
@@ -131,7 +131,7 @@ export const WardMatrixAndSeasonal: React.FC<WardMatrixAndSeasonalProps> = ({ cu
         <div className="lg:col-span-5 bg-surface-pure rounded-card p-6 md:p-8 border border-jodhpur/40 shadow-soft flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between pb-3 border-b border-jodhpur/30 mb-4">
-              <span className="text-[11px] font-bold uppercase text-royal bg-aster-light px-3 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase text-royal bg-aster-light px-3 py-1 rounded-full">
                 {currentLang === 'ja' ? '地域別ベンチマーク' : 'Territory Index'}
               </span>
               <span className="text-xs font-bold text-habanero">Kyoto 5-Ward Sample</span>
@@ -162,14 +162,14 @@ export const WardMatrixAndSeasonal: React.FC<WardMatrixAndSeasonalProps> = ({ cu
                       <MapPin className="w-3.5 h-3.5 text-royal" />
                       <span>{currentLang === 'ja' ? w.wardJa : w.wardEn}</span>
                     </div>
-                    <div className="text-[11px] text-royal-deep/60 mt-0.5">{w.typology}</div>
+                    <div className="text-xs text-royal-deep/65 mt-0.5">{w.typology}</div>
                   </div>
 
                   <div className="text-right shrink-0">
                     <div className="text-sm font-extrabold font-mono text-royal-deep tabular-nums">
                       ¥{w.adr.toLocaleString()}
                     </div>
-                    <div className="text-[10px] font-bold text-habanero">
+                    <div className="text-xs font-bold text-habanero">
                       {w.occupancyPct}% Occ · {w.simpleLodgingCount} 宿所
                     </div>
                   </div>
@@ -179,22 +179,22 @@ export const WardMatrixAndSeasonal: React.FC<WardMatrixAndSeasonalProps> = ({ cu
 
             {/* Selected Ward Regulatory Detail */}
             <div className="mt-4 p-3 rounded-xl bg-white border border-jodhpur/40 text-xs space-y-1">
-              <div className="font-bold text-royal text-[11px]">
+              <div className="font-bold text-royal text-xs">
                 {currentLang === 'ja'
                   ? `${wards[selectedWard].wardJa}の条例・法規制メモ:`
                   : `${wards[selectedWard].wardEn} Regulatory Note:`}
               </div>
-              <p className="text-royal-deep/70 text-[11px] leading-relaxed">
+              <p className="text-royal-deep/70 text-xs leading-relaxed">
                 {wards[selectedWard].regulatoryNote}
               </p>
-              <div className="text-[10px] text-royal-deep/60 pt-1 font-mono">
+              <div className="text-xs text-royal-deep/65 pt-1 font-mono">
                 {currentLang === 'ja' ? '適用宿泊税区分:' : 'Typical Accommodation Tax:'}{' '}
                 <strong>{wards[selectedWard].taxBracketTypical}</strong>
               </div>
             </div>
           </div>
 
-          <div className="mt-4 pt-3 border-t border-jodhpur/30 flex items-center justify-between text-[11px] font-semibold text-royal-deep/60">
+          <div className="mt-4 pt-3 border-t border-jodhpur/30 flex items-center justify-between text-xs font-semibold text-royal-deep/65">
             <span>Kyoto Tourism Bureau Statistics</span>
             <span className="text-royal font-bold">Updated October 2026</span>
           </div>

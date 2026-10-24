@@ -66,7 +66,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ currentLang, o
                     <h3 className="text-lg font-bold text-royal-deep">
                       {currentLang === 'ja' ? srv.titleJa : srv.title}
                     </h3>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-aster font-mono">
+                    <span className="text-xs font-bold uppercase tracking-wider text-aster font-mono">
                       {srv.id === 'benchmark_club' ? 'MEMBERSHIP' : `SERVICE ${srv.order}`}
                     </span>
                   </div>
@@ -77,7 +77,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ currentLang, o
 
                   {/* Japan Focus */}
                   <div className="mt-3 p-3 rounded-xl bg-luster/60 border border-jodhpur/30 text-xs">
-                    <div className="font-bold text-royal text-[11px] uppercase tracking-wider mb-0.5">
+                    <div className="font-bold text-royal text-xs uppercase tracking-wider mb-0.5">
                       {currentLang === 'ja' ? '日本の法規・市場への特化:' : 'Japan Market Focus:'}
                     </div>
                     <div className="text-royal-deep/70">
@@ -90,14 +90,14 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ currentLang, o
                     <div className="flex items-center gap-1.5 text-royal font-semibold">
                       <CheckCircle2 className="w-3.5 h-3.5 text-habanero shrink-0" />
                       <span>
-                        <strong className="text-royal-deep/60 mr-1">
+                        <strong className="text-royal-deep/65 mr-1">
                           {currentLang === 'ja' ? '納品物:' : 'Deliverable:'}
                         </strong>
                         {currentLang === 'ja' ? srv.deliverableJa : srv.deliverable}
                       </span>
                     </div>
 
-                    <div className="flex items-center gap-1 text-royal-deep/50 shrink-0 font-mono text-[11px]">
+                    <div className="flex items-center gap-1 text-royal-deep/65 shrink-0 font-mono text-xs">
                       <Clock className="w-3 h-3" />
                       <span>{srv.timeline}</span>
                     </div>

@@ -39,8 +39,8 @@ export const PurchaseModal: React.FC<PurchaseModalProps> = ({ productId, current
               <ShoppingCart className="w-5 h-5 text-habanero" />
             </div>
             <div>
-              <div className="text-[10px] uppercase font-bold tracking-widest text-aster">
-                {currentLang === 'ja' ? '購入手続き' : 'PURCHASE ORDER'} · {product.edition}
+              <div className="text-sm uppercase font-bold tracking-widest text-aster">
+                {currentLang === 'ja' ? '購入手続き' : 'ORDER'} · {product.edition}
               </div>
               <h3 className="text-base font-bold text-white">
                 {currentLang === 'ja' ? product.titleJa : product.title}
@@ -61,10 +61,10 @@ export const PurchaseModal: React.FC<PurchaseModalProps> = ({ productId, current
           {/* Product Summary Card */}
           <div className="bg-luster/60 rounded-2xl p-4 border border-jodhpur/30 flex items-center justify-between gap-4">
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-royal bg-aster-light px-2.5 py-0.5 rounded-full">
+              <span className="text-sm font-bold uppercase tracking-wider text-royal bg-aster-light px-2.5 py-0.5 rounded-full">
                 {product.coverTag}
               </span>
-              <div className="text-xs text-royal-deep/70 mt-1.5">
+              <div className="text-sm text-royal-deep/70 mt-1.5">
                 {currentLang === 'ja' ? product.deliveryFormatJa : product.deliveryFormat}
               </div>
             </div>
@@ -72,8 +72,8 @@ export const PurchaseModal: React.FC<PurchaseModalProps> = ({ productId, current
               <div className="text-2xl font-extrabold font-mono text-royal-deep tabular-nums">
                 {currentLang === 'ja' ? product.priceJa : product.price}
               </div>
-              <div className="text-[10px] text-royal-deep/60">
-                {currentLang === 'ja' ? 'PDF即時納品・請求書対応' : 'Instant PDF & Invoice Included'}
+              <div className="text-sm text-royal-deep/65">
+                {currentLang === 'ja' ? 'PDF即時納品' : 'Instant PDF'}
               </div>
             </div>
           </div>
@@ -82,8 +82,8 @@ export const PurchaseModal: React.FC<PurchaseModalProps> = ({ productId, current
             <form onSubmit={handleOrderSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-royal-deep uppercase mb-1">
-                    {currentLang === 'ja' ? 'お名前 / 貴社名 *' : 'Your Name / Company *'}
+                  <label className="block text-sm font-bold text-royal-deep uppercase mb-1">
+                    {currentLang === 'ja' ? 'お名前 / 貴社名 *' : 'Name / company *'}
                   </label>
                   <input
                     type="text"
@@ -91,13 +91,13 @@ export const PurchaseModal: React.FC<PurchaseModalProps> = ({ productId, current
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder={currentLang === 'ja' ? '高橋 健二郎' : 'Kenjiro Takahashi'}
-                    className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/40 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
+                    className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-sm text-royal-deep placeholder:text-royal-deep/65 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-royal-deep uppercase mb-1">
-                    {currentLang === 'ja' ? '納品先メールアドレス *' : 'Delivery Email *'}
+                  <label className="block text-sm font-bold text-royal-deep uppercase mb-1">
+                    {currentLang === 'ja' ? '納品先メール *' : 'Email *'}
                   </label>
                   <input
                     type="email"
@@ -105,47 +105,47 @@ export const PurchaseModal: React.FC<PurchaseModalProps> = ({ productId, current
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="owner@property.jp"
-                    className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/40 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
+                    className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-sm text-royal-deep placeholder:text-royal-deep/65 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-royal-deep uppercase mb-1">
-                  {currentLang === 'ja' ? '運営施設名・所在地（任意）' : 'Machiya / Property Name (Optional)'}
+                <label className="block text-sm font-bold text-royal-deep uppercase mb-1">
+                  {currentLang === 'ja' ? '施設名（任意）' : 'Property (optional)'}
                 </label>
                 <input
                   type="text"
                   value={property}
                   onChange={(e) => setProperty(e.target.value)}
                   placeholder={currentLang === 'ja' ? '京都市下京区 一棟貸し町家' : 'Kyoto Shimogyo Machiya'}
-                  className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-xs text-royal-deep placeholder:text-royal-deep/40 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
+                  className="w-full bg-luster/70 border border-jodhpur/50 rounded-xl px-4 py-2.5 text-sm text-royal-deep placeholder:text-royal-deep/65 focus:border-royal focus:ring-1 focus:ring-royal outline-none transition"
                 />
               </div>
 
               <div className="pt-2 space-y-3">
                 <button
                   type="submit"
-                  className="w-full bg-habanero hover:bg-habanero-hover text-white font-bold text-sm py-3.5 rounded-pill shadow-glow-habanero transition flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-habanero hover:bg-habanero-hover text-white font-bold text-base py-3.5 rounded-pill shadow-glow-habanero transition flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>
                     {currentLang === 'ja'
-                      ? `購入を確定して納品案内を受け取る (${product.priceJa})`
-                      : `Confirm Purchase & Receive Delivery (${product.price})`}
+                      ? `購入を確定する (${product.priceJa})`
+                      : `Confirm purchase (${product.price})`}
                   </span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
 
-                <div className="flex items-center justify-between text-[11px] text-royal-deep/60 px-1">
+                <div className="flex items-center justify-between text-sm text-royal-deep/65 px-1">
                   <div className="flex items-center gap-1">
                     <ShieldCheck className="w-3.5 h-3.5 text-royal" />
-                    <span>{currentLang === 'ja' ? '適格請求書（インボイス）発行対応' : 'Qualified Invoice Provided'}</span>
+                    <span>{currentLang === 'ja' ? '適格請求書を発行' : 'Qualified invoice included'}</span>
                   </div>
                   <a
                     href={`mailto:hello@bfoconsult.ing?subject=Purchase%20Order:%20${encodeURIComponent(product.title)}&body=I%20would%20like%20to%20order%20the%20${encodeURIComponent(product.title)}%20(${product.price}).`}
                     className="text-royal hover:underline font-semibold"
                   >
-                    {currentLang === 'ja' ? 'メールで直接注文' : 'Or Order by Direct Email'}
+                    {currentLang === 'ja' ? 'メールで注文' : 'Order by email'}
                   </a>
                 </div>
               </div>
@@ -156,19 +156,19 @@ export const PurchaseModal: React.FC<PurchaseModalProps> = ({ productId, current
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold text-royal-deep">
-                {currentLang === 'ja' ? 'ご購入手続きを受け付けました' : 'Purchase Order Registered'}
+                {currentLang === 'ja' ? '注文を受け付けました' : 'Order received'}
               </h3>
-              <p className="text-xs text-royal-deep/80 max-w-md mx-auto leading-relaxed">
+              <p className="text-sm text-royal-deep/80 max-w-md mx-auto leading-relaxed">
                 {currentLang === 'ja'
-                  ? `${name} 様、ご注文ありがとうございます。ダウンロードリンクおよび適格請求書（PDF）を、ご指定のメールアドレス（${email}）宛てに送付いたします。ご不明点は hello@bfoconsult.ing までご連絡ください。`
-                  : `Thank you, ${name}. Your order for "${product.title}" has been registered. The digital edition and qualified invoice will be delivered to ${email}. For instant support, reach out to hello@bfoconsult.ing.`}
+                  ? `${name} 様、ありがとうございます。ダウンロードリンクと適格請求書を ${email} に送ります。`
+                  : `Thank you, ${name}. We will send the PDF and invoice to ${email}.`}
               </p>
               <button
                 type="button"
                 onClick={onClose}
-                className="bg-royal hover:bg-royal-deep text-white font-bold text-xs px-6 py-2.5 rounded-pill transition cursor-pointer"
+                className="bg-royal hover:bg-royal-deep text-white font-bold text-sm px-6 py-2.5 rounded-pill transition cursor-pointer"
               >
-                {currentLang === 'ja' ? '閉じる' : 'Done'}
+                {currentLang === 'ja' ? '閉じる' : 'Close'}
               </button>
             </div>
           )}
