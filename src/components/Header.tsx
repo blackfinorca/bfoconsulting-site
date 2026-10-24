@@ -99,7 +99,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           <button
             onClick={() => onSelectTab('contact')}
-            className="bg-habanero hover:bg-habanero-hover text-white text-sm font-bold px-4 py-2 rounded-pill shadow-soft transition-all duration-200 flex items-center gap-1.5 shrink-0 cursor-pointer"
+            className="bg-habanero hover:bg-habanero-hover text-white text-sm font-bold px-4 py-2 rounded-pill shadow-soft transition-all duration-200 hidden sm:flex items-center gap-1.5 shrink-0 cursor-pointer"
           >
             <span>{currentLang === 'ja' ? 'お問い合わせ' : 'Contact us'}</span>
             <ArrowRight className="w-3.5 h-3.5" />

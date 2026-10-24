@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, Clock, Globe, Layers, DollarSign, Calculator, ShieldCheck, CheckSquare, Building, Users, Calendar, Compass, Mail } from 'lucide-react';
 import { Language, SITE_CONTENT } from '../data/content';
 import { PageTab } from '../components/Header';
+import { Reveal, Scrub, Stagger, StaggerItem } from '../components/ScrollMotion';
 
 interface ServicesPageProps {
   currentLang: Language;
@@ -50,34 +51,40 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
   };
 
   return (
-    <div className="w-full pt-28 pb-16">
+    <div className="w-full">
       {/* Header Banner */}
-      <section className="max-w-5xl mx-auto px-4 md:px-8 py-8">
-        <div className="text-center max-w-2xl mx-auto space-y-3">
+      <section className="max-w-5xl mx-auto px-4 md:px-8 pt-12 md:pt-16">
+        <Stagger stagger={0.1} delay={0.05} className="max-w-3xl space-y-4">
+          <StaggerItem>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-aster-light text-royal text-sm font-bold uppercase tracking-wider">
             {currentLang === 'ja' ? 'サービスと価値' : 'Services and value'}
           </div>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-royal-deep tracking-tight">
+          </StaggerItem>
+          <StaggerItem>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-royal-deep tracking-tight leading-[1.1]">
             {currentLang === 'ja'
               ? '小規模宿泊施設のためのリモートサービス'
               : 'Remote services for independent owners'}
-          </h1>
-          <p className="text-base text-royal-deep/75 leading-relaxed">
+          </h2>
+          </StaggerItem>
+          <StaggerItem>
+          <p className="text-lg text-royal-deep/75 leading-relaxed max-w-2xl">
             {currentLang === 'ja'
               ? 'OTAの管理画面と予約データから、すべてリモートで実施します。'
               : 'Every service runs remotely from your channel logins and booking exports.'}
           </p>
-        </div>
+          </StaggerItem>
+        </Stagger>
       </section>
 
       {/* Part 1: What Are We Doing (Core Services & AI Agents) */}
-      <section className="max-w-5xl mx-auto px-4 md:px-8 py-6">
-        <div className="flex items-center justify-between mb-6 pb-3 border-b border-jodhpur/40">
+      <section className="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+        <div className="flex items-end justify-between gap-4 mb-8 pb-4 border-b border-jodhpur/40">
           <div>
-            <span className="text-sm font-bold uppercase text-aster tracking-widest font-mono">
+            <span className="block mb-1 text-sm font-bold uppercase text-aster tracking-widest font-mono">
               SECTION 01
             </span>
-            <h2 className="text-xl md:text-2xl font-extrabold text-royal-deep">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-royal-deep tracking-tight">
               {currentLang === 'ja' ? 'サービス内容' : 'What we do'}
             </h2>
           </div>
@@ -86,13 +93,13 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
           </div>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-6">
           {coreServices.map((srv) => (
             <div
               key={srv.id}
-              className={`bg-surface-pure rounded-2xl p-6 border shadow-soft hover:shadow-elevated transition-all ${
+              className={`bg-surface-pure rounded-2xl p-6 md:p-8 border shadow-soft hover:shadow-elevated transition-all ${
                 srv.id === 'ai_agents'
-                  ? 'border-habanero/40 ring-1 ring-habanero/20 bg-gradient-to-r from-surface-pure via-surface-pure to-habanero/5'
+                  ? 'border-habanero/40 ring-1 ring-habanero/20 bg-gradient-to-r from-surface-pure via-surface-pure to-[#fff6ec]'
                   : 'border-jodhpur/40'
               }`}
             >
@@ -118,16 +125,13 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
                         </span>
                       )}
                     </div>
-                    <span className="text-sm font-bold uppercase tracking-wider text-aster font-mono">
-                      SERVICE {srv.order}
-                    </span>
                   </div>
 
-                  <p className="text-sm md:text-base text-royal-deep/80 leading-relaxed font-medium">
+                  <p className="text-sm md:text-base text-royal-deep/80 leading-relaxed font-medium max-w-prose">
                     {currentLang === 'ja' ? srv.whatWeDoJa : srv.whatWeDo}
                   </p>
 
-                  <div className="p-3 rounded-xl bg-luster/60 border border-jodhpur/30 text-sm">
+                  <div className="p-4 rounded-xl bg-luster/60 border border-jodhpur/30 text-sm">
                     <div className="font-bold text-royal text-sm uppercase tracking-wider mb-0.5">
                       {currentLang === 'ja' ? '日本向け:' : 'Japan focus:'}
                     </div>
@@ -160,29 +164,30 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
       </section>
 
       {/* Part 2: Value for Clients (The 5 Values & Evidence) */}
-      <section className="max-w-5xl mx-auto px-4 md:px-8 py-12">
-        <div className="flex items-center justify-between mb-6 pb-3 border-b border-jodhpur/40">
+      <section className="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+        <Reveal className="flex items-end justify-between gap-4 mb-8 pb-4 border-b border-jodhpur/40">
           <div>
-            <span className="text-sm font-bold uppercase text-aster tracking-widest font-mono">
+            <span className="block mb-1 text-sm font-bold uppercase text-aster tracking-widest font-mono">
               SECTION 02
             </span>
-            <h2 className="text-xl md:text-2xl font-extrabold text-royal-deep">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-royal-deep tracking-tight">
               {currentLang === 'ja' ? '5つの価値' : 'Why BFO'}
             </h2>
           </div>
           <p className="text-sm text-royal-deep/65 hidden sm:block">
             {currentLang === 'ja' ? '自館のレビューだけでは見えない根拠' : 'Evidence your own reviews cannot give'}
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {values.map((val, idx) => (
-            <div
+            <Scrub
               key={val.key}
-              className={`bg-surface-pure rounded-2xl p-5 border border-jodhpur/40 shadow-soft flex flex-col justify-between ${
-                idx === 0 ? 'md:col-span-2' : ''
-              }`}
+              className={idx === 0 ? 'md:col-span-2' : undefined}
+              from={idx === 0 ? { scale: 0.85, y: 80 } : { x: idx % 2 ? -140 : 140, y: 40 }}
+              lag={idx === 0 ? 0 : (idx % 2 ? 0 : 0.12)}
             >
+            <div className="h-full bg-surface-pure rounded-2xl p-6 md:p-8 border border-jodhpur/40 shadow-soft flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2.5">
@@ -198,7 +203,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
                   </span>
                 </div>
 
-                <p className="text-sm md:text-base text-royal-deep/75 leading-relaxed">
+                <p className="text-sm md:text-base text-royal-deep/75 leading-relaxed max-w-prose">
                   {currentLang === 'ja' ? val.meaningJa : val.meaning}
                 </p>
               </div>
@@ -212,18 +217,19 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
                 </span>
               </div>
             </div>
+            </Scrub>
           ))}
         </div>
       </section>
 
       {/* Part 3: Tailored Solutions for Independent Operators */}
-      <section className="max-w-5xl mx-auto px-4 md:px-8 py-10">
-        <div className="flex items-center justify-between mb-6 pb-3 border-b border-jodhpur/40">
+      <section className="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
+        <Reveal className="flex items-end justify-between gap-4 mb-8 pb-4 border-b border-jodhpur/40">
           <div>
-            <span className="text-sm font-bold uppercase text-aster tracking-widest font-mono">
+            <span className="block mb-1 text-sm font-bold uppercase text-aster tracking-widest font-mono">
               SECTION 03
             </span>
-            <h2 className="text-xl md:text-2xl font-extrabold text-royal-deep">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-royal-deep tracking-tight">
               {currentLang === 'ja'
                 ? '規模別の提案'
                 : 'Solutions by size'}
@@ -232,17 +238,17 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
           <span className="text-sm font-mono text-royal bg-aster-light px-2.5 py-0.5 rounded-full font-bold">
             4 Segments
           </span>
-        </div>
+        </Reveal>
 
         {/* Segment Selector Tabs */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-6">
+        <Reveal className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
           {segments.map((seg) => {
             const isSelected = seg.id === activeSegmentTab;
             return (
               <button
                 key={seg.id}
                 onClick={() => setActiveSegmentTab(seg.id)}
-                className={`p-3 rounded-2xl text-left border transition-all cursor-pointer flex flex-col justify-between ${
+                className={`p-4 rounded-2xl text-left border transition-all cursor-pointer flex flex-col justify-between ${
                   isSelected
                     ? 'bg-royal text-white border-royal shadow-sm'
                     : 'bg-white text-royal-deep/75 border-jodhpur/40 hover:bg-luster'
@@ -270,9 +276,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
               </button>
             );
           })}
-        </div>
+        </Reveal>
 
         {/* Segment Content Card */}
+        <Scrub from={{ scale: 0.85, y: 100 }}>
         <div className="bg-surface-pure rounded-card p-6 md:p-8 border border-jodhpur/40 shadow-soft">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             <div className="md:col-span-7 space-y-4">
@@ -283,7 +290,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
                 {currentLang === 'ja' ? currentSegment.titleJa : currentSegment.title}
               </h3>
 
-              <div className="p-3.5 rounded-xl bg-luster/60 border border-jodhpur/30 space-y-1">
+              <div className="p-4 rounded-xl bg-luster/60 border border-jodhpur/30 space-y-1">
                 <div className="text-sm font-bold uppercase tracking-wider text-royal">
                   {currentLang === 'ja' ? '必要なこと:' : 'What you need:'}
                 </div>
@@ -307,7 +314,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
               </div>
             </div>
 
-            <div className="md:col-span-5 bg-gradient-to-br from-royal via-royal to-royal-deep text-white rounded-2xl p-6 shadow-glow-royal space-y-4">
+            <div className="md:col-span-5 bg-gradient-to-br from-royal via-royal to-royal-deep text-white rounded-2xl p-6 md:p-8 shadow-glow-royal space-y-4">
               <div className="text-sm uppercase font-bold tracking-widest text-aster">
                 {currentLang === 'ja' ? '最初のご提案' : 'FIRST OFFER'}
               </div>
@@ -323,16 +330,18 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
                 onClick={() => onNavigate('contact')}
                 className="w-full bg-habanero hover:bg-habanero-hover text-white font-bold text-sm py-2.5 rounded-pill shadow-soft transition flex items-center justify-center gap-1.5 cursor-pointer"
               >
-                <span>{currentLang === 'ja' ? 'お問い合わせ' : 'Contact Us'}</span>
+                <span>{currentLang === 'ja' ? 'お問い合わせ' : 'Contact us'}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>
           </div>
         </div>
+        </Scrub>
       </section>
 
       {/* Bottom Contact Us Banner */}
-      <section className="max-w-5xl mx-auto px-4 md:px-8 mt-6">
+      <section className="max-w-5xl mx-auto px-4 md:px-8 pb-12 md:pb-16">
+        <Scrub from={{ scale: 0.8, y: 80 }}>
         <div className="bg-luster border border-jodhpur/50 rounded-card p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <h3 className="text-lg font-bold text-royal-deep">
@@ -358,11 +367,12 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
               onClick={() => onNavigate('contact')}
               className="bg-habanero hover:bg-habanero-hover text-white font-bold text-sm sm:text-base px-6 py-3 rounded-pill shadow-soft transition cursor-pointer shrink-0 flex items-center gap-2"
             >
-              <span>{currentLang === 'ja' ? 'お問い合わせ' : 'Contact Us'}</span>
+              <span>{currentLang === 'ja' ? 'お問い合わせ' : 'Contact us'}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>
+        </Scrub>
       </section>
     </div>
   );

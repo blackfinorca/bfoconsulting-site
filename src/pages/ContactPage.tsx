@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Send, CheckCircle2, Copy, Check, ShieldCheck } from 'lucide-react';
 import { Language } from '../data/content';
+import { Reveal, Scrub } from '../components/ScrollMotion';
 
 interface ContactPageProps {
   currentLang: Language;
@@ -33,21 +34,21 @@ export const ContactPage: React.FC<ContactPageProps> = ({ currentLang }) => {
   };
 
   return (
-    <div className="w-full pt-28 pb-16">
-      <section className="max-w-4xl mx-auto px-4 md:px-8 py-8">
+    <div className="w-full">
+      <section className="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-16">
         {/* Header */}
-        <div className="text-center max-w-xl mx-auto space-y-3 mb-10">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-royal-deep tracking-tight">
+        <Reveal className="max-w-3xl space-y-4 mb-8">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-royal-deep tracking-tight leading-[1.1]">
             {currentLang === 'ja' ? 'お問い合わせ' : 'Contact us'}
-          </h1>
-          <p className="text-base text-royal-deep/75 leading-relaxed">
+          </h2>
+          <p className="text-lg text-royal-deep/75 leading-relaxed max-w-2xl">
             {currentLang === 'ja'
               ? '施設とご相談内容をお知らせください。'
               : 'Tell us about your property and what you need.'}
           </p>
 
           {/* Direct Email Action Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-3">
+          <div className="flex flex-wrap items-center gap-3 pt-2">
             <a
               href={`mailto:${contactEmail}?subject=BFO%20Consulting%20Inquiry`}
               className="bg-royal hover:bg-royal-deep text-white font-bold text-sm px-5 py-2.5 rounded-pill shadow-soft transition flex items-center gap-2"
@@ -65,12 +66,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ currentLang }) => {
               <span>{copied ? 'Copied' : contactEmail}</span>
             </button>
           </div>
-        </div>
+        </Reveal>
 
         {/* Contact Form Card */}
-        <div className="bg-surface-pure rounded-card border border-jodhpur/50 shadow-elevated p-6 md:p-10">
+        <Scrub from={{ scale: 0.85, y: 140 }} className="bg-surface-pure rounded-card border border-jodhpur/50 shadow-elevated p-6 md:p-8">
           {!isSubmitted ? (
-            <form onSubmit={handleSubmit} className="space-y-4 max-w-2xl mx-auto">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-bold text-royal-deep uppercase mb-1">
@@ -194,7 +195,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ currentLang }) => {
               </button>
             </div>
           )}
-        </div>
+        </Scrub>
       </section>
     </div>
   );
