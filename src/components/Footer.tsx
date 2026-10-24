@@ -47,11 +47,11 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onNavigate }) => {
 
           {/* Minimal Email */}
           <a
-            href="mailto:hello@bfoconsult.ing"
+            href="mailto:blackfinorca@gmail.com"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white font-mono text-sm transition border border-white/15"
           >
             <Mail className="w-3.5 h-3.5 text-habanero" />
-            <span>hello@bfoconsult.ing</span>
+            <span>blackfinorca@gmail.com</span>
           </a>
         </div>
 

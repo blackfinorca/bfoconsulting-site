@@ -19,7 +19,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ currentLang }) => {
   const [copied, setCopied] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const contactEmail = 'hello@bfoconsult.ing';
+  const contactEmail = 'blackfinorca@gmail.com';
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(contactEmail);

@@ -414,11 +414,11 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ currentLang, onNav
           </div>
           <div className="flex items-center gap-3 shrink-0">
             <a
-              href="mailto:hello@bfoconsult.ing"
+              href="mailto:blackfinorca@gmail.com"
               className="bg-white/10 hover:bg-white/20 text-white font-mono text-sm px-4 py-2.5 rounded-pill border border-white/20 transition flex items-center gap-2"
             >
               <Mail className="w-3.5 h-3.5 text-habanero" />
-              <span>hello@bfoconsult.ing</span>
+              <span>blackfinorca@gmail.com</span>
             </a>
             <button
               onClick={() => onNavigate('contact')}

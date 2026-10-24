@@ -142,7 +142,7 @@ export const PurchaseModal: React.FC<PurchaseModalProps> = ({ productId, current
                     <span>{currentLang === 'ja' ? '適格請求書を発行' : 'Qualified invoice included'}</span>
                   </div>
                   <a
-                    href={`mailto:hello@bfoconsult.ing?subject=Purchase%20Order:%20${encodeURIComponent(product.title)}&body=I%20would%20like%20to%20order%20the%20${encodeURIComponent(product.title)}%20(${product.price}).`}
+                    href={`mailto:blackfinorca@gmail.com?subject=Purchase%20Order:%20${encodeURIComponent(product.title)}&body=I%20would%20like%20to%20order%20the%20${encodeURIComponent(product.title)}%20(${product.price}).`}
                     className="text-royal hover:underline font-semibold"
                   >
                     {currentLang === 'ja' ? 'メールで注文' : 'Order by email'}

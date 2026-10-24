@@ -357,11 +357,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ currentLang, onNavig
           </div>
           <div className="flex items-center gap-3 shrink-0 flex-wrap">
             <a
-              href="mailto:hello@bfoconsult.ing"
+              href="mailto:blackfinorca@gmail.com"
               className="bg-white hover:bg-luster text-royal-deep font-mono text-sm px-4 py-2.5 rounded-pill border border-jodhpur/50 transition flex items-center gap-2"
             >
               <Mail className="w-3.5 h-3.5 text-habanero" />
-              <span>hello@bfoconsult.ing</span>
+              <span>blackfinorca@gmail.com</span>
             </a>
             <button
               onClick={() => onNavigate('contact')}
